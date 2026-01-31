@@ -23,8 +23,14 @@ public class FirstSeleniumTest {
     }
 
     @Test
-    public void testLoggingIntoApplication(){
-        WebElement username driver.findElement(By.name("username"));
+    public void testLoggingIntoApplication() throws InterruptedException{
+        Thread.sleep(2000);
+        WebElement username =driver.findElement(By.name("username"));
         username.sendKeys("Admin");
+
+        var password = driver.findElement(By.name("password"));
+        password.sendKeys("admin123");
+        driver.findElement(By.tagName("button")).click();
+
     }
 }
