@@ -6,7 +6,7 @@ public class ProductsPage extends BasePage{
  private By productsHeader=By.xpath("//span[text()='Products']");
  public boolean isProductsHeaderDisplayed()
  {
-     return find(productsHeader).isDisplayed()
+     return find(productsHeader).isDisplayed();
  }
 
 }
