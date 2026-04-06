@@ -12,12 +12,21 @@ public class LoginPage extends BasePage{
     set(usernameField, username );
     }
 
-    public void setPasswordField(String password) {
+    public void setPassword(String password) {
         set(passwordField, password);
     }
-    public void clickLoginButton()
+    public ProductsPage clickLoginButton()
     {
-        click(loginButton);
-
+    click(loginButton);
+    return new ProductsPage();
+    }
+    public ProductsPage LogIntoApplication(String username, String password){
+        setUsername(username);
+        setPassword(password);
+        return clickLoginButton();
+    }
+    public String getErrorMessage()
+    {
+          return find(errorMessage).getText();
     }
 }
