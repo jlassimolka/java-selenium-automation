@@ -23,6 +23,9 @@ public class BasePage {
     public static  void delay(int milliseconds){
         try{
             Thread.sleep(milliseconds);
-        }1:45
+        } catch (InterruptedException exc){
+
+            exc.printStackTrace();
+        }
     }
 }
