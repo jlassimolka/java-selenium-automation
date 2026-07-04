@@ -40,4 +40,15 @@ public class PracticeFormPage extends FormsPage{
             clickJS(musicHobbyCheckbox);
         }
     }
+
+    public void unclickReadingCheckbox() {
+        if (find(readingHobbyCheckbox).isSelected()) {
+            scrollToElementJS(readingHobbyCheckbox);
+            clickJS(readingHobbyCheckbox);
+        }
+    }
+    public boolean isReadingSelected() {
+        return find(readingHobbyCheckbox).isSelected();
+    }
+
 }
