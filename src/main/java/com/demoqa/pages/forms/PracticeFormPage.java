@@ -13,5 +13,7 @@ public class PracticeFormPage extends FormsPage{
         clickJS(femaleRadioButton);
     }
 
-
+    public boolean isFemaleSelected() {
+        return find(femaleRadioButton).isSelected();
+    }
 }
